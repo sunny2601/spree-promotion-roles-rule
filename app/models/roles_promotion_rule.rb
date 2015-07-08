@@ -6,7 +6,7 @@
 
 
 class RolesPromotionRule < Spree::PromotionRule
-  attr_accessible :role_ids_string, :role_list
+  #attr_accessible :role_ids_string, :role_list
 
   belongs_to :role, :class_name => '::Spree::Role'
   has_and_belongs_to_many :roles, :class_name => '::Spree::Role',
