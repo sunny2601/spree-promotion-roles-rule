@@ -19,6 +19,10 @@ class RolesPromotionRule < Spree::PromotionRule
     end
     false
   end
+  
+  def applicable?(promotable)
+    promotable.is_a?(Spree::Order)
+  end
 
 #  def role_ids_string
 #    role_ids.join(',')
